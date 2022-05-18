@@ -1,0 +1,27 @@
+*.class
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+
+
+# javadoc
+/javadoc
+
+# dist
+/dist
+
+#maven target
+/target
+
+# Eclipse stuff
+.classpath
+.project
+/bin
+
+# IntelliJ
+*.iml
+/.idea
+/out
