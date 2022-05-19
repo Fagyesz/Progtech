@@ -23,7 +23,7 @@ public class App extends JTableTest {
     List<String> dummyRow = new ArrayList<String>();
     DefaultTableModel model = new DefaultTableModel();
 
-    public App() {new JTableTest();
+    public App() {
         evolutionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
