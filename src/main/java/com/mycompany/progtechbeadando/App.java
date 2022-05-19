@@ -18,6 +18,7 @@ public class App extends JTableTest {
     private JTable table1;
     private JTextField textField1;
     private JScrollPane table;
+    private JComboBox comboBox1;
 
     List<String> ActualRow = new ArrayList<String>();
     List<String> dummyRow = new ArrayList<String>();
@@ -28,6 +29,7 @@ public class App extends JTableTest {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //getdummyRow();
+                new DataImporter();
 
             }
         });
@@ -57,8 +59,8 @@ public class App extends JTableTest {
 
     }
     private void getRow() {
-        Map map = Map.getInstance();
 
+        Map map = Map.getInstance();
         for (int i = 0; i < 8; i++) {
             System.out.print(map.getMap()[0][i]);
             ActualRow.add(Character.toString(map.getMap()[0][i]));

@@ -13,7 +13,7 @@ import java.util.Scanner;
 import static java.lang.Integer.parseInt;
 
 /**
- *
+ * Made by:
  * Florian & Szabolcs
  */
 public class Main {
@@ -27,7 +27,7 @@ public class Main {
 
 
         Scanner myObj = new Scanner(System.in);
-        System.out.println("Enter How many instances u want");
+        System.out.println("Enter How many Iteration u want");
         String NumberOfInstances = myObj.nextLine();
         int instances=parseInt(NumberOfInstances);
         while (instances!=0) {
@@ -40,9 +40,7 @@ public class Main {
         }
 
 
-        //És így szívesebben ad 5-öst a tanár
-        //Kiegészíteni szülőtől örökléssel
-        //Kicsit dinamikusabb kiíratás
+
     }
     
 }

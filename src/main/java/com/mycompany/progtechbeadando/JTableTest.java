@@ -55,6 +55,9 @@ public class JTableTest extends JFrame
                 { "6", "Jack", "Bauer", "jbauer@ctu.gov"}
         };
 
+
+
+
         this.jTable = new JTable(data, columnNames);
 
         this.scrollPane = new JScrollPane(this.jTable);
