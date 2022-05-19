@@ -4,12 +4,14 @@
 *Vincze Flórián*
 *Váraljai Szabolcs*
 
-The Following Design Patterns are implemented:
-- Creational Patterns 
+The Following **Design Patterns** are implemented:
+- **Creational Patterns** 
   - Prototype
   - Singleton
   - Builder
-- Structural Patterns
+- **Structural Patterns**
   - Decorator
-- Behavioral Patterns
+- **Behavioral Patterns**
   - Strategy
+  - State
+  - Command
