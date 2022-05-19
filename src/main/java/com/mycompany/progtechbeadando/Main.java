@@ -5,6 +5,9 @@
  */
 package com.mycompany.progtechbeadando;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -20,6 +23,9 @@ public class Main {
      */
     public static void main(String[] args) {
 
+
+
+
         Scanner myObj = new Scanner(System.in);
         System.out.println("Enter How many instances u want");
         String NumberOfInstances = myObj.nextLine();
@@ -29,8 +35,11 @@ public class Main {
             Map map = Map.getInstance();
             map.beginEvolution();
             instances=instances-1;
+
+
         }
-        
+
+
         //És így szívesebben ad 5-öst a tanár
         //Kiegészíteni szülőtől örökléssel
         //Kicsit dinamikusabb kiíratás
