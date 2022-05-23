@@ -46,6 +46,7 @@ public class App extends JTable {
             @Override
             public void actionPerformed(ActionEvent e) {
                 PostData.PostDataToDB(MapToData.MapToDataValue());
+                MapToData.chain=null;
 
             }
         });
