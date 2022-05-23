@@ -28,7 +28,7 @@ public class App extends JTableTest {
         evolutionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //getdummyRow();
+
                 new GetData();
 
             }
@@ -53,61 +53,15 @@ public class App extends JTableTest {
 
         }
 
-        JTable jt;
 
 
 
-    }
-    private void getRow() {
-
-        Map map = Map.getInstance();
-        for (int i = 0; i < 8; i++) {
-            System.out.print(map.getMap()[0][i]);
-            ActualRow.add(Character.toString(map.getMap()[0][i]));
-        }
-        model.addRow(ActualRow.toArray());
-        table1.setModel(model);
-    }
-    private void getdummyRow() {
-        Map map = Map.getInstance();
-
-        for (int i = 0; i < 16; i++) {
-            System.out.print(map.getMap()[0][i]);
-            dummyRow.add(Character.toString(map.getMap()[0][i]));
-        }
-        for (int i = 0; i < 16; i++) {
-            System.out.print(dummyRow.get(i));
-
-        }
-        String[] tblHead={"Item Name","Price","Qty","Discount"};
-        DefaultTableModel dtm=new DefaultTableModel(tblHead,0);
-        JTable tbl=new JTable(dtm);
-        String[] item={"A","B","C","D"};
-        dtm.addRow(item);
-/*
-        String[] columnNames = {"First Name",
-                "Last Name",
-                "Sport",
-                "# of Years",
-                "Vegetarian"};
-        Object[][] data = {
-                {"Kathy", "Smith",
-                        "Snowboarding", new Integer(5), new Boolean(false)},
-                {"John", "Doe",
-                        "Rowing", new Integer(3), new Boolean(true)},
-                {"Sue", "Black",
-                        "Knitting", new Integer(2), new Boolean(false)},
-                {"Jane", "White",
-                        "Speed reading", new Integer(20), new Boolean(true)},
-                {"Joe", "Brown",
-                        "Pool", new Integer(10), new Boolean(false)}
-        };
-        JTable table = new JTable(data, columnNames);
-
-
-*/
 
     }
+
 
 
 }
+
+
+

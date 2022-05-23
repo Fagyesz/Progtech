@@ -50,7 +50,7 @@ public class dataToMap{
 
 
                 savedMap[number][rem] = String.valueOf(datastr.charAt(i));
-                ;
+
                 //System.out.println(savedMap[number][rem]);
 
                 } catch (Exception e) {
