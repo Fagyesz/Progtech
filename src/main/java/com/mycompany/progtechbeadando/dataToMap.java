@@ -6,7 +6,29 @@ public class dataToMap{
     public static String  datastr;
     public static char[][] savedMap = new char[16][32];
 
+    public static String[][] DATA = new String[16][32];
+
     public static Map[][] map=new Map[16][32];
+
+
+    public static void GetStringMap(){
+        String tmp;
+        try{
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < 32; j++) {
+                DATA[i][j] = String.valueOf(savedMap[i][j]);
+            }
+
+        }
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
+    public static String[][] GetStringMapValue(){
+        GetStringMap();
+        return DATA;
+    }
     public static void main(String[]args) {
         //DataToMapFromDB();
 
