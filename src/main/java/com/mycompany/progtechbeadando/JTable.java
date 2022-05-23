@@ -44,15 +44,18 @@ public class JTable extends JFrame
     public JTable()
     {
         //SETUP JTABLE
-        String [] columnNames = {"ID", "First Name", "Last Name", "Email Address"};
+        String [] columnNames = {"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
         String [][] data = {
-                { "1", "Rambotimous", "Prime", "rprime@ramferno.org" },
-                { "2", "John", "Doe", "jdoe@me.com" },
-                { "3", "Peneloppe", "Garcia", "pgarcia@fbi.gov"},
-                { "4", "Chloe", "O'Brian", "cobrian@ctu.gov"},
-                { "5", "Spencer", "Reid", "sreid@fbi.gov"},
-                { "6", "Jack", "Bauer", "jbauer@ctu.gov"}
+                { "","", "","","","","","","","","","","","","","","" },
         };
+
+        Map map = Map.getInstance();
+        String [][] finalMap = new String[16][32];
+        for(int i = 0;i < 16;i++) {
+            for (int j = 0; j < 32; j++) {
+                finalMap[i][j] = String.valueOf(map.getInstance());
+            }
+        }
 
 
 
