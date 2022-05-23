@@ -13,10 +13,13 @@ public class dataToMap{
 
     public static void GetStringMap(){
         String tmp;
+
+        Map map = Map.getInstance();
         try{
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 32; j++) {
-                DATA[i][j] = String.valueOf(savedMap[i][j]);
+                DATA[i][j] = String.valueOf(map.getMap()[i][j]);
+
             }
 
         }
@@ -27,10 +30,14 @@ public class dataToMap{
     }
     public static String[][] GetStringMapValue(){
         GetStringMap();
+
+        System.out.println(DATA[1][1]);
+
         return DATA;
     }
     public static void main(String[]args) {
         //DataToMapFromDB();
+        System.out.println(DATA[0][1]);
 
     }
     public static void DataToMapFromDB(int tmp){

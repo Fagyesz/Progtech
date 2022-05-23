@@ -2,62 +2,45 @@ package com.mycompany.progtechbeadando;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
-/**
- * A sample application showing a JTable.
- *
- * @author Zachary Seguin
- * @version 1.0 (6/6/2012)
- */
+
 public class JTable extends JFrame
 {
-    /**
-     * This title label.
-     *
-     * @since 1.0
-     */
+
     private JLabel lblTitle;
 
-    /**
-     * Scroll pane to hold the JTable, so a scroll bar is shown when the data exceeds the visible size.
-     *
-     * @since 1.0
-     */
-    private JScrollPane scrollPane;
-    /**
-     * Self explanatory...
-     */
-    private javax.swing.JTable jTable;
 
-    /**
-     * Manages the layout of the application.
-     *
-     * @since 1.0
-     */
+    private JScrollPane scrollPane;
+
+    private static javax.swing.JTable jTable;
+
+
     private SpringLayout layout;
 
-    /**
-     * Contructs and initalizes the GUI interface.
-     *
-     * @since 1.0
-     */
+
+    public static String [][] dataa=new String[16][32];
     public JTable()
     {
         //SETUP JTABLE
-        String [] columnNames = {"ID", "First Name", "Last Name", "Email Address"};
+        String [] columnNames = {"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
         String [][] data = {
-                { "1", "Rambotimous", "Prime", "rprime@ramferno.org" },
-                { "2", "John", "Doe", "jdoe@me.com" },
-                { "3", "Peneloppe", "Garcia", "pgarcia@fbi.gov"},
-                { "4", "Chloe", "O'Brian", "cobrian@ctu.gov"},
-                { "5", "Spencer", "Reid", "sreid@fbi.gov"},
-                { "6", "Jack", "Bauer", "jbauer@ctu.gov"}
+                { "","", "","","","","","","","","","","","","","","" },
         };
 
+        Map map = Map.getInstance();
+        String [][] finalMap = new String[16][32];
+        for(int i = 0;i < 16;i++) {
+            for (int j = 0; j < 32; j++) {
+                finalMap[i][j] = String.valueOf(map.getInstance());
+            }
+        }
+        data= dataToMap.GetStringMapValue();
+        dataa=dataToMap.GetStringMapValue();
 
 
 
-        this.jTable = new javax.swing.JTable(data, columnNames);
+        this.jTable = new javax.swing.JTable(dataa, columnNames);
 
         this.scrollPane = new JScrollPane(this.jTable);
 
@@ -83,7 +66,7 @@ public class JTable extends JFrame
         this.layout.putConstraint(SpringLayout.SOUTH, this.scrollPane, -10, SpringLayout.SOUTH, this.getContentPane());
 
         //SETUP THE JFRAME
-        this.setTitle("JTable Test");
+        this.setTitle("JTable");
         this.setSize(600, 400);
         this.setMinimumSize(new Dimension(400, 200));
         this.setLocationRelativeTo(null);
@@ -91,8 +74,19 @@ public class JTable extends JFrame
         this.setVisible(true);
     }//End of constructor method
 
+    public void Repaint(){
+        jTable.repaint();
+
+    }
+    public static void Refresh(){
+        String [] columnNames = {"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
+        //this.jTable = new javax.swing.JTable(dataa, columnNames);
+        jTable.revalidate();
+
+    }
     public static void main (String [] args)
     {
-        new JTable();
+        System.out.println(dataa[1][1]);
+        //new JTable();
     }//End of main method
 }//End of class
