@@ -2,6 +2,8 @@ package com.mycompany.progtechbeadando;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,9 @@ public class App extends JTable {
     private JPanel panelMain;
     private JButton loadButton;
     private JButton saveButton;
-    private JComboBox comboBox1;
+    private JComboBox cbLoad;
+    private JButton loadLatestButton;
+    private JComboBox cbEvo;
 
     List<String> ActualRow = new ArrayList<String>();
     List<String> dummyRow = new ArrayList<String>();
@@ -24,6 +28,26 @@ public class App extends JTable {
     public App() {
 
 
+        loadLatestButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dataToMap.DataToMapFromDBLatest();
+            }
+        });
+        loadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String tmp= (String) cbLoad.getSelectedItem();
+                int tmp2= Integer.parseInt(tmp);
+                dataToMap.DataToMapFromDB(tmp2);
+            }
+        });
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
     public static void main(String[]args){
         JFrame frame=new JFrame("App");

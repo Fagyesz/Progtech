@@ -77,8 +77,8 @@ public class GetData {
 
     }
 
-    public static String [] returnData(){
-    GetDataFromDB(GlobalID);
+    public static String [] returnData(int tmp){
+    GetDataFromDB(tmp);
     return data;
     }
     public static String [] returnLatestData(){

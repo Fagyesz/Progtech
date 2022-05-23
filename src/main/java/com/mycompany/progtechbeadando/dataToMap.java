@@ -10,8 +10,12 @@ public class dataToMap{
         //DataToMapFromDB();
 
     }
-    public static void DataToMapFromDB(){
-        DataToMap(GetData.returnData());
+    public static void DataToMapFromDB(int tmp){
+
+        DataToMap(GetData.returnData(tmp));
+    }
+    public static void DataToMapFromDBLatest(){
+        DataToMap(GetData.returnLatestData());
     }
 
     public static void DataToMap(String [] a) {
