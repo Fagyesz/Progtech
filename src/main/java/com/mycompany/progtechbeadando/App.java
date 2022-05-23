@@ -29,7 +29,7 @@ public class App extends JTableTest {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //getdummyRow();
-                new DataImporter();
+                new GetData();
 
             }
         });
