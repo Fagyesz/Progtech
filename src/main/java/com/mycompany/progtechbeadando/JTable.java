@@ -1,7 +1,6 @@
 package com.mycompany.progtechbeadando;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 /**
@@ -10,7 +9,7 @@ import javax.swing.*;
  * @author Zachary Seguin
  * @version 1.0 (6/6/2012)
  */
-public class JTableTest extends JFrame
+public class JTable extends JFrame
 {
     /**
      * This title label.
@@ -28,7 +27,7 @@ public class JTableTest extends JFrame
     /**
      * Self explanatory...
      */
-    private JTable jTable;
+    private javax.swing.JTable jTable;
 
     /**
      * Manages the layout of the application.
@@ -42,7 +41,7 @@ public class JTableTest extends JFrame
      *
      * @since 1.0
      */
-    public JTableTest()
+    public JTable()
     {
         //SETUP JTABLE
         String [] columnNames = {"ID", "First Name", "Last Name", "Email Address"};
@@ -58,7 +57,7 @@ public class JTableTest extends JFrame
 
 
 
-        this.jTable = new JTable(data, columnNames);
+        this.jTable = new javax.swing.JTable(data, columnNames);
 
         this.scrollPane = new JScrollPane(this.jTable);
 
@@ -94,6 +93,6 @@ public class JTableTest extends JFrame
 
     public static void main (String [] args)
     {
-        new JTableTest();
+        new JTable();
     }//End of main method
 }//End of class
