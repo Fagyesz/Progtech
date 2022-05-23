@@ -55,9 +55,24 @@ public class Map {
         }
         return instance;
     }
-    
+    public static void setInstanceNull(){
+        instance=null;
+    }
     public char[][] getMap(){
         return map;
+    }
+    public char[][] setMap(){
+        return map;
+    }
+    public void SetMap(char [][] savedMap){
+        char tmp;
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < 32; j++) {
+                tmp=savedMap[i][j];
+                map[i][j] = savedMap[i][j];
+            }
+        }
+
     }
     
     public char getEmptyCellTexture(){

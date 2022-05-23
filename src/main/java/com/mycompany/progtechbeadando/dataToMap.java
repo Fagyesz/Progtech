@@ -4,8 +4,9 @@ public class dataToMap{
 
     public static String [] data;
     public static String  datastr;
-    public static String[][] savedMap = new String[16][32];
+    public static char[][] savedMap = new char[16][32];
 
+    public static Map[][] map=new Map[16][32];
     public static void main(String[]args) {
         //DataToMapFromDB();
 
@@ -52,7 +53,7 @@ public class dataToMap{
             try {
 
 
-                savedMap[number][rem] = String.valueOf(datastr.charAt(i));
+                savedMap[number][rem] = datastr.charAt(i);
 
                 //System.out.println(savedMap[number][rem]);
 
@@ -62,6 +63,8 @@ public class dataToMap{
             i++;
             rem++;
         }
+
+
             //System.out.println();
             //System.out.println(datastr.charAt(1));
             //System.out.println(savedMap[14][5]);

@@ -18,12 +18,17 @@ public class PostData {
     */
     public static void PostDataToDB(String a){
         try{
-            data=a;
+            data=a; System.out.println(data);
+            if (data!=null||data==""){
             sql="INSERT INTO saves(save) values('"+data+"')";
             Connection connection = getConnection("jdbc:mysql://localhost:3306/progtech", "root", "Otakufaj1");
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
             System.out.println("All good");
+            }
+            else {
+                System.out.println("Valami beköpte");
+            }
             //ResultSet resultSet = statement.executeQuery(sql);
         }catch (Exception e) {
             e.printStackTrace();

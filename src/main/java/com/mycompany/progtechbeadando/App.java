@@ -45,9 +45,35 @@ public class App extends JTable {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                PostData.PostDataToDB(MapToData.MapToDataValue());
 
             }
         });
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //PostData.PostDataToDB();
+            }
+        });
+        evolutionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int iteration=0;
+                String tmp= (String) cbEvo.getSelectedItem();
+                int tmp2= Integer.parseInt(tmp);
+                iteration=tmp2;
+
+                while (iteration!=0) {
+
+                    Map map = Map.getInstance();
+                    map.beginEvolution();
+                    iteration=iteration-1;
+
+
+                }
+            }
+        });
+
     }
     public static void main(String[]args){
         JFrame frame=new JFrame("App");
