@@ -5,12 +5,11 @@ public class dataToMap{
     public static String [] data;
     public static String  datastr;
     public static String[][] savedMap = new String[16][32];
-    /*
-    @test
-    public static void main(String[]args) {
-        DataToMapFromDB();
 
-    }*/
+    public static void main(String[]args) {
+        //DataToMapFromDB();
+
+    }
     public static void DataToMapFromDB(){
         DataToMap(GetData.returnData());
     }
