@@ -25,6 +25,7 @@ public class PostData {
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
             System.out.println("All good");
+            data=null;
             }
             else {
                 System.out.println("Valami beköpte");
